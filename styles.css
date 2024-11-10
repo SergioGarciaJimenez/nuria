@@ -1,7 +1,7 @@
 /* General Styles */
 
 body {
-  background-color: #f7f7f7;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
   color: #4a4a4a;
@@ -58,12 +58,12 @@ nav {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 header nav ul li a {
   text-decoration: none;
-  font-size: 21px;
+  font-size: 20px;
   font-family: "Raleway", sans-serif;
   padding: 8px 28px;
   color: #d86982;
@@ -171,7 +171,7 @@ header .social-icons img {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #fff1e6;
+  background-color: #FFFFFF;
   height: 40vh;
   padding: 50px 0;
 }
@@ -213,12 +213,19 @@ header .social-icons img {
   align-items: center;
   gap: 5em;
   padding: 5em;
-  align-items: flex-start;
   background-color: #F5E0E9;
 }
 
 .text {
   width: 17.5%;
+  text-align: center;
+}
+
+.text h2 {
+  text-align: center;
+}
+
+.text p {
   text-align: left;
 }
 
@@ -226,6 +233,96 @@ header .social-icons img {
   width: 25%;
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   box-shadow: 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonios */
+
+.testimonios {
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  position: relative;
+  overflow: hidden; 
+  margin-bottom: 2rem;
+}
+
+.testimonios-title {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 3rem;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+}
+
+.testimonial-slide {
+  display: none; 
+  background: #F5E0E9;
+  padding: 20px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.testimonial-slide.active {
+  display: block; 
+  opacity: 1;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.testimonial-slide.active:hover {
+  transform: scale(1.05) translateY(-10px); /* Aumenta tamaño y levanta */
+}
+
+.testimonial-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.testimonial-photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ddd;
+  margin-right: 10px;
+}
+
+.testimonial-author {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+/* Carousel dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #444;
 }
 
 /* Footer */
@@ -237,4 +334,113 @@ footer {
   color: white;
   font-size: 20px;
   height: 8vh;
+}
+
+/* Responsive */
+
+
+/* Responsive */
+
+/* Moviles */
+
+@media (max-width: 600px) {
+
+}
+
+/* Tablets - Portatil */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Header */
+
+  header {
+    height: 12vh;
+  }
+
+  #logo {
+    width: 150px; 
+  }
+
+  nav ul {
+    gap: 1rem; 
+    padding: 0;
+  }
+
+  header nav ul li a {
+    font-size: 16px;  
+    padding: 0 0 6px 0;
+  }
+
+  header .social-icons img {
+    width: 22px;
+    margin: 0px 13px;
+  }
+  
+  .social-icons {
+    padding-right: 2.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .text {
+    width: 35%;
+  }
+
+}
+
+/* Desktop */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+
+  /* Header */
+
+  #logo {
+    width: 150px; 
+  }
+
+  nav ul {
+    gap: 1rem; 
+    padding: 0;
+  }
+
+  header nav ul li a {
+    font-size: 16px;  
+    padding: 0 0 6px 0;
+  }
+
+  header .social-icons img {
+    width: 24px;
+    margin: 0px 14px;
+  }
+  
+  .social-icons {
+    padding-right: 2.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .text {
+    width: 30%;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+
+  /* Header */
+
+  #logo {
+    width: 170px; 
+  }
+
+  nav ul {
+    gap: 2rem; 
+    padding: 0;
+  }
+
+  header nav ul li a {
+    font-size: 17px; 
+    padding: 6px; 
+  }
+
+  .text {
+    width: 27%;
+  }
 }
