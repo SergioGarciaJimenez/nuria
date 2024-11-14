@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuria Sánchez Coach</title>
+    <title>Contacto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://nuriasanchezcoach.com/index/wp-content/uploads/img/icons/favicon.ico"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -14,8 +19,11 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
     <!-- Header -->
@@ -23,32 +31,37 @@
       <div class="logo"><img src="img/icons/logo rosa.png" id="logo" /></div>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Sobre mí</a></li>
-          <li><a href="services.html">Mis servicios</a></li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre mí</a></li>
+          <li><a href="#">Mis servicios</a></li>
           <li><a href="contact.html">Contacto</a></li>
         </ul>
       </nav>
       <div class="social-icons">
-        <a href="https://www.facebook.com/nuriasanchezcoach/"><img src="img/icons/facebook.png" alt="Facebook" /></a>
-        <a href="https://www.tiktok.com/@nuriasanchezcoach"><img src="img/icons/tik-tok.png" alt="Tik tok" /></a>
-        <a href="https://www.instagram.com/nuriasanchezcoach/?hl=es"><img src="img/icons/instagram.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/nuriasanchezcoach/"
+          ><img src="img/icons/facebook.png" alt="Facebook"
+        /></a>
+        <a href="https://www.tiktok.com/@nuriasanchezcoach"
+          ><img src="img/icons/tik-tok.png" alt="Tik tok"
+        /></a>
+        <a href="https://www.instagram.com/nuriasanchezcoach/?hl=es"
+          ><img src="img/icons/instagram.png" alt="Instagram"
+        /></a>
       </div>
     </header>
 
-    <!-- Main -->
-    <section class="main">
-      <div class="main-column">
+    <div class="main">
+      <form action="your_form_processing_script" method="POST">
+        <h2>Contacto</h2>
+        <input type="text" id="name" name="name" placeholder="Nombre" required />
+        <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+        <textarea id="message" name="message" rows="10" placeholder="Tu mensaje" required></textarea>
+        <div class="checkbox-container">
+          <input type="checkbox" id="newsletter" name="newsletter" />
+          <label for="newsletter">Deseo suscribirme a la newsletter con las novedades</label>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
-    </section>
-
-    <!-- Advantages -->
-    <section class="advantages">
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Nuria Sánchez</p>
-    </footer>
   </body>
 </html>
