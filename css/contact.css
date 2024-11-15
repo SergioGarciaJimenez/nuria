@@ -237,6 +237,16 @@ header .social-icons img {
     padding: 0 0 5px 0;
   }
 
+  header nav ul li a:hover {
+    letter-spacing: 0px;
+  }
+
+  header nav ul li a::before {
+    width: 0;
+    height: 0px;
+    background-color: none;
+  }
+
   header .social-icons img {
     width: 13px;
     margin: 0px 5px;
