@@ -15,7 +15,7 @@ header {
   height: 15vh;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #logo {
@@ -32,8 +32,9 @@ header {
 
 nav {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 1rem;
+  padding: 0;
 }
 
 header nav ul {
@@ -95,11 +96,11 @@ header .social-icons img {
   flex: 1;
   display: flex;
   justify-content: flex-end;
+  align-self: center;
   margin: 0;
   padding: 0;
   list-style: none;
-  padding-right: 3rem;
-  padding-top: 1.7rem;
+  padding-right: 2rem;
 }
 
 /* About - Formation - Book */
@@ -194,16 +195,14 @@ footer {
   height: 8vh;
 }
 
+
 /* Responsive */
 
 /* Mobile */
 
 @media (max-width: 600px) {
-  /* Header */
 
-  header {
-    height: 8vh;
-  }
+  /* Header */
 
   #logo {
     width: 90px;
@@ -213,12 +212,12 @@ footer {
   header nav ul {
     gap: 1rem;
     padding: 0;
-    margin: 0.25rem;
+    margin: 0;
   }
 
   header nav ul li a {
-    font-size: 10px;
-    padding: 0 0 5px 0;
+    font-size: 12px;
+    padding: 0;
   }
 
   header nav ul li a:hover {
@@ -227,19 +226,17 @@ footer {
 
   header nav ul li a::before {
     width: 0;
-    height: 0px;
+    height: 0;
     background-color: none;
   }
 
   header .social-icons img {
     width: 13px;
-    margin: 0px 5px;
+    margin: 0px 7px;
   }
 
   .social-icons {
     padding-right: 0rem;
-    padding-top: 0.35rem;
-    justify-content: center;
   }
 
   /* About - Formation - Book */
@@ -319,33 +316,30 @@ footer {
 }
 
 @media (min-width: 601px) and (max-width: 799px) {
+
   /* Header */
-  header {
-    height: 12vh;
-  }
 
   #logo {
     width: 110px;
   }
 
   header nav ul {
-    gap: 1.8rem;
-    margin: 0.25rem;
+    gap: 1.7rem;
+    margin: 0rem;
   }
 
   header nav ul li a {
-    font-size: 12px;
+    font-size: 11px;
     padding: 0 0 5px 0;
   }
 
   header .social-icons img {
-    width: 16px;
+    width: 14px;
     margin: 0px 10px;
   }
 
   .social-icons {
-    padding-right: 1.5rem;
-    padding-top: 0.5rem;
+    padding-right: 1.3rem;
   }
 
   /* About - Formation - Book */
@@ -380,12 +374,12 @@ footer {
   }
 
   .about-text h1 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
 
   .about-text p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     line-height: 1.4;
   }
 
@@ -396,7 +390,7 @@ footer {
   }
 
   .about-youtube h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
   }
 
@@ -417,10 +411,6 @@ footer {
 @media (min-width: 800px) and (max-width: 1024px) {
   /* Header */
 
-  header {
-    height: 10vh;
-  }
-
   #logo {
     width: 140px;
   }
@@ -438,11 +428,11 @@ footer {
 
   header .social-icons img {
     width: 20px;
+    margin: 0 15px;
   }
 
   .social-icons {
-    padding-right: 1.75rem;
-    padding-top: 0.6rem;
+    padding-right: 1.25rem;
   }
 
   /* About - Formation - Book */
@@ -507,10 +497,11 @@ footer {
 /* Bigger laptop */
 
 @media (min-width: 1025px) and (max-width: 1199px) {
+  
   /* Header */
 
   #logo {
-    width: 150px;
+    width: 160px;
   }
 
   header nav ul {
@@ -520,7 +511,7 @@ footer {
   }
 
   header nav ul li a {
-    font-size: 17px;
+    font-size: 18px;
     padding: 0 0 6px 0;
   }
 
@@ -530,11 +521,60 @@ footer {
   }
 
   .social-icons {
-    padding-right: 2.25rem;
-    padding-top: 0.6rem;
+    padding-right: 1rem;
   }
 
-  /* Main */
+  /* About - Formation - Book */
+
+  .about-me,
+  .formation,
+  .book {
+    padding: 1.5rem 0rem;
+  }
+
+  .about-content,
+  .formation-content,
+  .book-content {
+    gap: 2.5rem;
+  }
+
+  .about-photo,
+  .form-photo,
+  .book-photo {
+    width: 240px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-photo,
+  .book-photo {
+    width: 240px;
+  }
+
+  .about-text {
+    max-width: 375px;
+  }
+
+  .about-text h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Youtube */
+
+  .about-youtube {
+    padding: 1rem 0 2rem;
+  }
+
+  .about-youtube h2 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+  }
 
   /* Footer */
 
@@ -545,8 +585,10 @@ footer {
 
 /* Desktop */
 
-@media (min-width: 1200px) and (max-width: 1375px) {
+@media (min-width: 1200px) and (max-width: 1350px) {
+
   /* Header */
+
   #logo {
     width: 170px;
   }
@@ -558,16 +600,70 @@ footer {
   }
 
   header nav ul li a {
-    font-size: 20px;
+    font-size: 19px;
     padding: 6px;
-  }
-
-  .social-icons {
-    padding-top: 0.6rem;
   }
 
   header .social-icons img {
     width: 24px;
   }
-  /* Main */
+
+  /* About - Formation - Book */
+
+  .about-me,
+  .formation,
+  .book {
+    padding: 1.5rem 0rem;
+  }
+
+  .about-content,
+  .formation-content,
+  .book-content {
+    gap: 2.5rem;
+  }
+
+  .about-photo,
+  .form-photo,
+  .book-photo {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-photo,
+  .book-photo {
+    width: 250px;
+  }
+
+  .about-text {
+    max-width: 400px;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* Youtube */
+
+  .about-youtube {
+    padding: 1rem 0 2rem;
+  }
+
+  .about-youtube h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+    /* Footer */
+
+    footer {
+      font-size: 1.2rem;
+    }
+
 }
