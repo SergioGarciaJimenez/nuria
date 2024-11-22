@@ -428,6 +428,10 @@ footer {
   /*Advantages */
 
 
+  .advantages {
+    padding: 3rem 0;
+  }
+
   .advantages img {
     width: 45px;
   }
@@ -447,7 +451,7 @@ footer {
   /* Summary */
 
   .summary {
-    padding: 2rem;
+    padding: 2.5rem;
     gap: 3rem;
   }
 
@@ -471,11 +475,13 @@ footer {
 
   .testimonios {
     max-width: 350px;
+    padding: 0.25rem;
+    margin-bottom: 1.5rem;
   }
 
   .testimonios-title {
     font-size: 1.1rem;
-    padding-top: 1rem;
+    padding-top: 0.7rem;
   }
 
   .testimonial-text {
@@ -494,6 +500,7 @@ footer {
   /* Footer */
 
   footer {
+    height: 5vh;
     font-size: 0.8rem;
   }
 }
@@ -547,6 +554,10 @@ footer {
 
   /*Advantages */
 
+  .advantages {
+    padding: 3.5rem 0;
+  }
+
   .advantages img {
     width: 50px;
   }
@@ -566,7 +577,7 @@ footer {
   /* Summary */
 
   .summary {
-    padding: 4rem;
+    padding: 2.5rem;
   }
 
   .summary img {
@@ -582,18 +593,20 @@ footer {
   }
 
   .text {
-    width: 45%;
+    width: 50%;
   }
 
   /* Testimonios */
 
   .testimonios {
     max-width: 500px;
+    margin-bottom: 1rem;
   }
 
   .testimonios-title {
     font-size: 1.3rem;
-    padding-top: 1rem;
+    padding-top: 0rem;
+    margin-bottom: 2rem;
   }
 
   .testimonial-text {
@@ -607,7 +620,8 @@ footer {
   /* Footer */
   
   footer {
-    font-size: 1rem;
+    height: 7vh;
+    font-size: 0.9rem;
   }
 }
 
