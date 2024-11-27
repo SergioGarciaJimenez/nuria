@@ -1,320 +1,413 @@
 /* General Styles */
 
 body {
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    color: #4a4a4a;
-    font-family: "Lato", sans-serif;
-  }
-  
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #4a4a4a;
+  font-family: "Lato", sans-serif;
+}
+
+/* Header */
+
+header {
+  color: white;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 225px;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+
+.logo {
+  flex: 1;
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+  padding: 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  list-style: none;
+  align-items: flex-start;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  padding: 8px 0;
+  color: #d86982;
+  position: relative;
+  transition: 0.4s;
+}
+
+header nav ul li a:hover {
+  letter-spacing: 2px;
+}
+
+header nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #d86982;
+  transition: all 0.4s;
+}
+
+header nav ul li a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.social-icons img {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+}
+
+header .social-icons img {
+  width: 28px;
+  margin: 0px 20px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.social-icons img:hover {
+  transform: scale(1.25) perspective(1px);
+}
+
+.social-icons {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-right: 2rem;
+}
+
+/* Services */
+
+.services-section {
+  background-color: #f9f9f9;
+}
+
+.services-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.services-intro h2, .services-final h2{
+  font-size: 2.5rem;
+  color: #d86982;
+  font-family: "Raleway", sans-serif;
+}
+
+.services-intro p, .services-final p{
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 35%;
+  margin: 1rem auto;
+  line-height: 1.6;
+}
+
+.services-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+  padding: 4rem;
+}
+
+/* Services cards */
+
+.service-card {
+  overflow: hidden;
+  position: relative;
+  background: #f5e0e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.service-summary {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0.2rem;
+}
+
+.service-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding: 0.5rem;
+}
+
+.service-card img {
+  width: 80%;
+}
+
+.service-card.expanded .service-details {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.toggle-details {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #d86982;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-details:hover {
+  background-color: #b3576b;
+}
+
+.services-final {
+  padding: 1.25rem;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+}
+
+.link {
+  position: relative;
+  color: #d86982;
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #d86982;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d86982;
+  color: white;
+  font-size: 1.3rem;
+  height: 8vh;
+}
+
+/* Responsive */
+
+/* Mobile */
+
+@media (max-width: 600px) {
   /* Header */
-  
-  header {
-    color: white;
-    height: 15vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1rem;
-  }
-  
+
   #logo {
-    width: 225px;
-    padding-left: 1rem;
+    width: 90px;
+    padding-left: 0.7rem;
   }
-  
-  .logo {
-    flex: 1;
-    align-self: flex-start;
-  }
-  
-  nav {
-    display: flex;
-    align-items: flex-start;
-    align-self: flex-start;
-  }
-  
+
   header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 8rem;
-    justify-content: center;
-    list-style: none;
-  }
-  
-  header nav ul li a {
-    text-decoration: none;
-    font-size: 20px;
-    font-family: "Raleway", sans-serif;
-    padding: 8px 0;
-    color: #d86982;
-    position: relative;
-    transition: 0.4s;
-  }
-  
-  header nav ul li a:hover {
-    letter-spacing: 2px;
-  }
-  
-  header nav ul li a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: #d86982;
-    transition: all 0.4s;
-  }
-  
-  header nav ul li a:hover::before {
-    width: 100%;
-    left: 0;
-  }
-  
-  .social-icons img {
-    transform: translate(0px, 5px);
-    -webkit-transform: translate(0px, 5px);
-  }
-  
-  header .social-icons img {
-    width: 28px;
-    margin: 0px 20px;
-    transition: all 0.3s ease;
-    transform: scale(1);
-  }
-  
-  .social-icons img:hover {
-    transform: scale(1.25) perspective(1px);
-  }
-  
-  .social-icons {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    margin: 0;
+    gap: 1rem;
     padding: 0;
-    list-style: none;
-    padding-right: 3rem;
-    padding-top: 1.2rem;
-    align-self: flex-start;
+    margin: 0;
   }
 
-  
-  
+  header nav ul li a {
+    font-size: 12px;
+    padding: 0;
+  }
+
+  header nav ul li a:hover {
+    letter-spacing: 0px;
+  }
+
+  header nav ul li a::before {
+    width: 0;
+    height: 0;
+    background-color: none;
+  }
+
+  header .social-icons img {
+    width: 13px;
+    margin: 0px 7px;
+  }
+
+  .social-icons {
+    padding-right: 0rem;
+  }
+
   /* Footer */
-  
+
   footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #d86982;
-    color: white;
-    font-size: 1.3rem;
-    height: 8vh;
+    height: 5vh;
+    font-size: 0.8rem;
   }
-  
-  /* Responsive */
-  
-  /* Mobile */
-  
-  @media (max-width: 600px) {
+}
 
-    /* Header */
-  
-    header {
-      height: 8vh;
-    }
-  
-    #logo {
-      width: 90px;
-      padding-left: 0.7rem;
-    }
-  
-    header nav ul {
-      gap: 2rem;
-      padding: 0;
-      margin: 0.25rem;
-    }
-  
-    header nav ul li a {
-      font-size: 10px;
-      padding: 0 0 5px 0;
-    }
-  
-    header nav ul li a:hover {
-      letter-spacing: 0px;
-    }
-  
-    header nav ul li a::before {
-      width: 0;
-      height: 0px;
-      background-color: none;
-    }
-  
-    header .social-icons img {
-      width: 13px;
-      margin: 0px 5px;
-    }
-  
-    .social-icons {
-      padding-right: 0rem;
-      padding-top: 0.35rem;
-      justify-content: center;
-    }
-  
-    /* Footer */
-  
-    footer {
-      height: 5vh;
-      font-size: 0.8rem;
-    }
-  }
-  
-  @media (min-width: 601px) and (max-width: 799px) {
-    /* Header */
-  
-    header {
-      height: 12vh;
-    }
-  
-    #logo {
-      width: 110px;
-    }
-  
-    header nav ul {
-      gap: 1.8rem;
-      margin: 0.25rem;
-    }
-  
-    header nav ul li a {
-      font-size: 12px;
-      padding: 0 0 5px 0;
-    }
-  
-    header .social-icons img {
-      width: 16px;
-      margin: 0px 10px;
-    }
-  
-    .social-icons {
-      padding-right: 1.5rem;
-      padding-top: 0.5rem;
-    }
-    
-    /* Footer */
-    
-    footer {
-      height: 7vh;
-      font-size: 0.9rem;
-    }
-  }
-  
-  /* Tablet - Laptop */
-  
-  @media (min-width: 800px) and (max-width: 1024px) {
-    /* Header */
-  
-    header {
-      height: 10vh;
-    }
-  
-    #logo {
-      width: 140px;
-    }
-  
-    header nav ul {
-      gap: 2.5rem;
-      padding: 0;
-      margin: 0.5rem;
-    }
-  
-    header nav ul li a {
-      font-size: 15px;
-      padding: 0 0 6px 0;
-    }
-  
-    header .social-icons img {
-      width: 20px;
-    }
-  
-    .social-icons {
-      padding-right: 1.75rem;
-      padding-top: 0.6rem;
-    }
+@media (min-width: 601px) and (max-width: 799px) {
+  /* Header */
 
-    /* Footer */
-  
-    footer {
-      font-size: 1rem;
-    }
+  #logo {
+    width: 110px;
   }
-  
-  /* Bigger laptop */
-  
-  @media (min-width: 1025px) and (max-width: 1199px) {
-    /* Header */
-  
-    #logo {
-      width: 150px;
-    }
-  
-    header nav ul {
-      gap: 5rem;
-      padding: 0;
-      margin: 0.5rem;
-    }
-  
-    header nav ul li a {
-      font-size: 17px;
-      padding: 0 0 6px 0;
-    }
-  
-    header .social-icons img {
-      width: 22px;
-      margin: 0px 15px;
-    }
-  
-    .social-icons {
-      padding-right: 2.25rem;
-      padding-top: 0.6rem;
-    }
-  
-    /* Footer */
-  
-    footer {
-      font-size: 1.2rem;
-    }
-  }
-  
-  /* Desktop */
-  
-  @media (min-width: 1200px) and (max-width: 1350px) {
-    /* Header */
-  
-    #logo {
-      width: 170px;
-    }
-  
-    header nav ul {
-      gap: 5rem;
-      padding: 0;
-      margin: 0.5rem;
-    }
-  
-    header nav ul li a {
-      font-size: 20px;
-      padding: 6px;
-    }
-  
-    .social-icons {
-      padding-top: 0.6rem;
-    }
-  
-    header .social-icons img {
-      width: 24px;
-    }
 
+  header nav ul {
+    gap: 1.7rem;
+    margin: 0rem;
   }
-  
+
+  header nav ul li a {
+    font-size: 11px;
+    padding: 0 0 5px 0;
+  }
+
+  header .social-icons img {
+    width: 14px;
+    margin: 0px 10px;
+  }
+
+  .social-icons {
+    padding-right: 1.3rem;
+  }
+
+  /* Footer */
+
+  footer {
+    height: 7vh;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet - Laptop */
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  /* Header */
+
+  #logo {
+    width: 140px;
+  }
+
+  header nav ul {
+    gap: 2.5rem;
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 15px;
+    padding: 0 0 6px 0;
+  }
+
+  header .social-icons img {
+    width: 20px;
+    margin: 0 15px;
+  }
+
+  .social-icons {
+    padding-right: 1.25rem;
+  }
+
+  /* Footer */
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
+/* Bigger laptop */
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  /* Header */
+
+  /* Header */
+
+  #logo {
+    width: 160px;
+  }
+
+  header nav ul {
+    gap: 5rem;
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 18px;
+    padding: 0 0 6px 0;
+  }
+
+  header .social-icons img {
+    width: 22px;
+    margin: 0px 15px;
+  }
+
+  .social-icons {
+    padding-right: 1rem;
+  }
+
+  /* Footer */
+
+  footer {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop */
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  /* Header */
+
+  #logo {
+    width: 170px;
+  }
+
+  header nav ul {
+    gap: 5rem;
+    padding: 0;
+    margin: 0.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 19px;
+    padding: 6px;
+  }
+
+  header .social-icons img {
+    width: 24px;
+  }
+}
