@@ -8,6 +8,13 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+font-weight: bold;
+color: #4a4a4a;
+}
+
 /* Background */
 
 .background {
@@ -262,9 +269,11 @@ header .social-icons img {
 }
 
 .testimonios-title {
+	font-family: "Raleway", sans-serif;
   font-size: 1.9rem;
-  color: #444;
+  color: #4a4a4a;
   margin-bottom: 3rem;
+	font-weight: bold;
 }
 
 .carousel {
