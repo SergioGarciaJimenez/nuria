@@ -1,25 +1,36 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "garzyfreestyle@gmail.com";
-    $subject = "Nuevo mensaje de contacto";
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
-    $newsletter = isset($_POST["newsletter"]) ? "Sí" : "No";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Validar y capturar los datos del formulario
 
-    $body = "Nombre: $name\nCorreo electrónico: $email\nMensaje:\n$message\n\nDesea suscribirse a la newsletter: $newsletter";
+    $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+    $name = htmlspecialchars(trim($_POST['name']));
+    $messageContent = htmlspecialchars(trim($_POST['message'])); 
+    $newsletter = isset($_POST['newsletter']) ? "Sí" : "No"; 
 
-    $headers = "From: $email";
+    if ($email && $name && $messageContent) {
+        $to = "ergarci94@hotmail.com"; 
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "<h2>¡Gracias por contactarnos!</h2><p>Tu mensaje ha sido enviado con éxito.</p>";
+        $subject = "Nuevo mensaje: $name";
+        $message = "Has recibido un nuevo mensaje de contacto:\n\n";
+        
+        $message .= "Nombre: $name\n";
+        $message .= "Correo: $email\n";
+        $message .= "Mensaje: $messageContent\n";
+        $message .= "Suscripción a newsletter: $newsletter\n";
+
+        $headers = "From: $email\r\n"; 
+        $headers .= "Reply-To: $email\r\n"; 
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Mensaje enviado correctamente. En breve me pondré en contacto contigo.";
+        } else {
+            echo "Error al enviar el mensaje. Por favor, inténtalo más tarde.";
+        }
     } else {
-        echo "<h2>Error</h2><p>No pudimos enviar tu mensaje. Inténtalo de nuevo más tarde.</p>";
+        echo "Por favor, completa todos los campos correctamente.";
     }
 } else {
     echo "Método no permitido.";
 }
-
-header("Location: ../index.html");
-exit();
 ?>
