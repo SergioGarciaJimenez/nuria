@@ -133,8 +133,11 @@ header .social-icons img {
   align-items: flex-start;
 }
 
+.formation-content {
+  justify-content: center;
+}
+
 .about-photo,
-.form-photo,
 .book-photo {
   width: 300px;
   height: auto;
@@ -144,9 +147,13 @@ header .social-icons img {
   margin: auto;
 }
 
-.form-photo,
 .book-photo {
   width: 380px;
+}
+
+.formation .formation-content .about-text {
+  width: 75%;
+  max-width: none;
 }
 
 .about-text {
@@ -164,7 +171,8 @@ header .social-icons img {
   margin-top: 0.5rem;
 }
 
-.formation h1, .filo h1 {
+.formation h1,
+.filo h1 {
   margin-bottom: 2rem;
 }
 
@@ -176,43 +184,43 @@ header .social-icons img {
 
 .strong {
   font-weight: bold;
-  color:#d86982;
+  color: #d86982;
   font-size: 1.4rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
 .simpleList {
-  list-style: none; 
+  list-style: none;
   padding: 0;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .simpleList li {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1em;
-  margin-bottom: 0.5em;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .simpleList li .icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: 0.5em;
-  background-color: green; 
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-color: green;
   color: #fff;
   font-weight: bold;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .formationList {
-  list-style: none; 
+  list-style: none;
   padding: 0;
   margin: 1rem 0;
 }
@@ -220,42 +228,42 @@ header .social-icons img {
 .formationList li {
   display: flex;
   align-items: flex-start;
-  text-align: justify; 
-  margin-bottom: 0.8rem; 
-  line-height: 1.5; 
+  text-align: justify;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
   font-size: 1.2rem;
   gap: 0.5rem;
   padding-bottom: 1rem;
 }
 
 .formationList li::before {
-  content: "•"; 
-  color: #d86982; 
+  content: "•";
+  color: #d86982;
   font-size: 1.2rem;
   flex-shrink: 0;
   line-height: 1.5;
 }
 
 .filoList {
-  list-style: none; 
+  list-style: none;
   padding: 0;
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
 }
 
 .filoList li {
-  display: flex; 
+  display: flex;
   align-items: flex-start;
-  gap: 1.5rem; 
-  margin-bottom: 1.2em; 
-  font-size: 1.4rem; 
-  font-weight: 500; 
-  line-height: 1.5; 
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .filoList li::before {
   content: "★";
-  color: #d86982; 
-  font-size: 1.7rem; 
+  color: #d86982;
+  font-size: 1.7rem;
   flex-shrink: 0;
   line-height: 1.3;
 }
@@ -291,13 +299,11 @@ footer {
   height: 8vh;
 }
 
-
 /* Responsive */
 
 /* Mobile */
 
 @media (max-width: 600px) {
-
   /* Header */
 
   #logo {
@@ -356,7 +362,6 @@ footer {
   }
 
   .about-photo,
-  .form-photo,
   .book-photo {
     width: 150px;
     height: auto;
@@ -365,7 +370,6 @@ footer {
     flex-shrink: 0;
   }
 
-  .form-photo,
   .book-photo {
     width: 150px;
   }
@@ -384,6 +388,45 @@ footer {
     line-height: 1.4;
   }
 
+  .strong {
+    font-size: 1rem;
+  }
+
+  .formation h1 {
+    margin-bottom: 1.75rem;
+  }
+
+  .simpleList li {
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .simpleList li .icon {
+    display: none;
+  }
+
+  .formationList li {
+    font-size: 0.8rem;
+  }
+
+  .formationList li::before {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  .filoList li {
+    gap: 1.25rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .filoList li::before {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
   /* Youtube */
 
   .about-youtube {
@@ -400,8 +443,8 @@ footer {
   }
 
   #youtube-video {
-    width: 300px; 
-    height: 170px; 
+    width: 300px;
+    height: 170px;
   }
 
   /* Footer */
@@ -412,7 +455,6 @@ footer {
 }
 
 @media (min-width: 601px) and (max-width: 799px) {
-
   /* Header */
 
   #logo {
@@ -454,14 +496,12 @@ footer {
   }
 
   .about-photo,
-  .form-photo,
   .book-photo {
     width: 200px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .form-photo,
   .book-photo {
     width: 200px;
   }
@@ -480,6 +520,47 @@ footer {
     line-height: 1.4;
   }
 
+  .strong {
+    font-size: 1.1rem;
+  }
+
+  .formation h1 {
+    margin-bottom: 1.75rem;
+  }
+
+  .simpleList li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .simpleList li .icon {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .formationList li {
+    font-size: 0.9rem;
+  }
+
+  .formationList li::before {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  .filoList li {
+    gap: 1.5rem;
+    margin-bottom: 1.2em;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .filoList li::before {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
   /* Youtube */
 
   .about-youtube {
@@ -492,8 +573,8 @@ footer {
   }
 
   #youtube-video {
-    width: 450px; 
-    height: 300px; 
+    width: 450px;
+    height: 300px;
   }
 
   /* Footer */
@@ -547,14 +628,12 @@ footer {
   }
 
   .about-photo,
-  .form-photo,
   .book-photo {
     width: 225px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .form-photo,
   .book-photo {
     width: 225px;
   }
@@ -571,6 +650,55 @@ footer {
   .about-text p {
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  .strong {
+    font-size: 1.2rem;
+  }
+
+  .formation h1 {
+    margin-bottom: 1.75rem;
+  }
+
+  .simpleList li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .simpleList li .icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .formationList li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .formationList li::before {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+
+  .filoList {
+    margin: 1.5rem 0;
+  }
+
+  .filoList li {
+    gap: 1.5rem;
+    margin-bottom: 1.2em;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .filoList li::before {
+    font-size: 1.4rem;
+    line-height: 1.2;
   }
 
   /* Youtube */
@@ -594,7 +722,6 @@ footer {
 /* Bigger laptop */
 
 @media (min-width: 1025px) and (max-width: 1199px) {
-  
   /* Header */
 
   #logo {
@@ -636,14 +763,12 @@ footer {
   }
 
   .about-photo,
-  .form-photo,
   .book-photo {
     width: 240px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .form-photo,
   .book-photo {
     width: 240px;
   }
@@ -683,7 +808,6 @@ footer {
 /* Desktop */
 
 @media (min-width: 1200px) and (max-width: 1350px) {
-
   /* Header */
 
   #logo {
@@ -720,20 +844,18 @@ footer {
   }
 
   .about-photo,
-  .form-photo,
   .book-photo {
     width: 250px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
-  .form-photo,
   .book-photo {
     width: 250px;
   }
 
   .about-text {
-    max-width: 400px;
+    max-width: 550px;
   }
 
   .about-text h1 {
@@ -744,6 +866,55 @@ footer {
   .about-text p {
     font-size: 1rem;
     line-height: 1.4;
+  }
+
+  .strong {
+    font-size: 1.3rem;
+  }
+
+  .formation h1 {
+    margin-bottom: 1.75rem;
+  }
+
+  .simpleList li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .simpleList li .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .formationList li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .formationList li::before {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .filoList {
+    margin: 1.5em 0;
+  }
+
+  .filoList li {
+    gap: 1.5rem;
+    margin-bottom: 1.2em;
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .filoList li::before {
+    font-size: 1.6rem;
+    line-height: 1.2;
   }
 
   /* Youtube */
@@ -757,10 +928,9 @@ footer {
     margin-bottom: 2rem;
   }
 
-    /* Footer */
+  /* Footer */
 
-    footer {
-      font-size: 1.2rem;
-    }
-
+  footer {
+    font-size: 1.2rem;
+  }
 }
